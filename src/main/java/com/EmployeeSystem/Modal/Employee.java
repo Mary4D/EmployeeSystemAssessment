@@ -18,11 +18,14 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String name;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = false)
     private Date dateOfBirth;
 
+    @Column(nullable = false)
     private Double salary;
 
     @ManyToOne
@@ -30,9 +33,12 @@ public class Employee {
     private Department department;
 
     private String address;
+
+    @Column(nullable = false)
     private String role;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = false)
     private Date joiningDate;
 
     private Double yearlyBonusPercentage;
