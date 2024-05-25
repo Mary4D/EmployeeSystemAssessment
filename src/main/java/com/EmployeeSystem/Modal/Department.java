@@ -14,9 +14,11 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String name;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = false)
     private Date creationDate;
 
     @OneToOne
